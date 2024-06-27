@@ -1,0 +1,38 @@
+﻿@model DiaNhac
+<br>
+<form asp-action="Update" method="post" enctype="multipart/form-data">
+    <h2 class="text-primary">Update Music</h2>
+    <hr />
+    <input asp-for="Id" type="hidden" />
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group pb-2">
+                <label class="text-primary">Tựa đề</label>
+                <input asp-for="TieuDe" class="form-control text-primary" />
+                <span asp-validation-for="TieuDe" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-2">
+                <label class="text-primary">Nghệ sĩ</label>
+                <textarea asp-for="NgheSi" class="form-control text-primary"></textarea>
+                <span asp-validation-for="NgheSi" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-2">
+                <label class="text-primary">Thể loại</label>
+                <input asp-for="TrongNuoc" class="form-control text-primary" />
+                <span asp-validation-for="TrongNuoc" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-2">
+                <label class="text-primary">Số Lượng</label>
+                <input asp-for="SoLuong" class="form-control text-primary" />
+                <span asp-validation-for="SoLuong" class="text-danger"></span>
+            </div><div class="form-group pb-2">
+                <label class="text-primary">Giá bán</label>
+                <input asp-for="GiaBan" class="form-control text-primary" />
+                <span asp-validation-for="GiaBan" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-outline-success"> Update </button>
+            <a asp-action="Index" class="btn btn-outline-secondary">Back to List</a>
+        </div>
+    </div>
+</form>
